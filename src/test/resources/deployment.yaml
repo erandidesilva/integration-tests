@@ -60,3 +60,4 @@ deployments:
     -
       ballerina : ballerina-server
       mssql : mssql-db
+      tomcatairline : tomcat-airline-soap-be
