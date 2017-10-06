@@ -1,7 +1,7 @@
 deployments:
   -
     name: ballerina_standalone
-    enable: true
+    enable: false
     deployscripts: deploy.sh
     repository: N/A
     suite: pattern1
@@ -12,7 +12,7 @@ deployments:
       ballerina : ballerina-test-version-1
   -
       name: ballerina_tomcat
-      enable: true
+      enable: false
       deployscripts: deploy.sh
       repository: N/A
       suite: pattern3
@@ -24,7 +24,7 @@ deployments:
         tomcat : tomcat-rest-be
   -
     name: mysql_connector
-    enable: true
+    enable: false
     deployscripts: deploy.sh
     repository: N/A
     suite: pattern2
@@ -47,3 +47,16 @@ deployments:
     -
       ballerina : ballerina-server
       broker : activemq-server
+
+  -
+    name: airline_system
+    enable: true
+    deployscripts: deploy.sh
+    repository: N/A
+    suite: pattern2
+    undeployscripts: undeploy.sh
+    filePath: deployment.json
+    instancemap :
+    -
+      ballerina : ballerina-server
+      mssql : mssql-db
